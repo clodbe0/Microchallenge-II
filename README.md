@@ -109,9 +109,112 @@ Material needed:
 We started working on three different files, one for the distance detector, one for the led, one for the microphone to then blend them together in a final one. 
 - In the first one we connected the detector to measure distances, and we set an area that represents our area of interest when we want the recording to    start. Since that the lateral measure of our box is 40 cm we set the area of interest as 35 cm, so that the area is defined once that the person is already inside. 
 <img width="367" alt=" " src="https://user-images.githubusercontent.com/115195638/225652500-6762d770-9ef6-43a9-99c5-8d1712a7bc7f.png">
+
+**distance measurement code**
+
+#Libraries
+import RPi.GPIO as GPIO
+import time
+ 
+#GPIO Mode (BOARD / BCM)
+GPIO.setmode(GPIO.BCM)
+ 
+#set GPIO Pins
+GPIO_TRIGGER = 18
+GPIO_ECHO = 24
+ 
+#set GPIO direction (IN / OUT)
+GPIO.setup(GPIO_TRIGGER, GPIO.OUT)
+GPIO.setup(GPIO_ECHO, GPIO.IN)
+ 
+def distance():
+    # set Trigger to HIGH
+    GPIO.output(GPIO_TRIGGER, True)
+ 
+    # set Trigger after 0.01ms to LOW
+    time.sleep(0.00001)
+    GPIO.output(GPIO_TRIGGER, False)
+ 
+    StartTime = time.time()
+    StopTime = time.time()
+ 
+    # save StartTime
+    while GPIO.input(GPIO_ECHO) == 0:
+        StartTime = time.time()
+ 
+    # save time of arrival
+    while GPIO.input(GPIO_ECHO) == 1:
+        StopTime = time.time()
+ 
+    # time difference between start and arrival
+    TimeElapsed = StopTime - StartTime
+    # multiply with the sonic speed (34300 cm/s)
+    # and divide by 2, because there and back
+    distance = (TimeElapsed * 34300) / 2
+ 
+    return distance
+ 
+if __name__ == '__main__':
+    try:
+        while True:
+            dist = distance()
+            print ("Measured Distance = %.1f cm" % dist)
+            if dist <= 35:
+                print ("we are in the area of interest")
+            time.sleep(1)
+ 
+        # Reset by pressing CTRL + C
+    except KeyboardInterrupt:
+        print("Measurement stopped by User")
+        GPIO.cleanup()
+
 - The script for the led was the most simple one, basically just connecting the LED with an on and off function.
 - The last script is the one that triggered us the most.
   *Problem 1*: We first started with a microphone that unfortunately didn't work. Then we switched to usb headphones with microphone (we're just using the microphone). We managed to actually record, to play the recording we first moved them in a USB and then in the laptop to check. 
+  
+**Microphone code**   
+
+Import pyaudio
+import wave
+ 
+FORMAT = pyaudio.paInt16
+CHANNELS = 1
+RATE = 44100
+CHUNK = 1024
+RECORD_SECONDS = 5
+WAVE_OUTPUT_FILENAME = "file.wav"
+ 
+audio = pyaudio.PyAudio()
+ 
+# start Recording
+stream = audio.open(format=FORMAT, channels=CHANNELS,
+                input_device_index = 1, rate=RATE, input=True,
+                frames_per_buffer=CHUNK)
+print ("recording...")
+frames = []
+ 
+for i in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
+    data = stream.read(CHUNK)
+    frames.append(data)
+print ("finished recording")
+ 
+ 
+# stop Recording
+stream.stop_stream()
+stream.close()
+audio.terminate()
+ 
+waveFile = wave.open(WAVE_OUTPUT_FILENAME, 'wb')
+waveFile.setnchannels(CHANNELS)
+waveFile.setsampwidth(audio.get_sample_size(FORMAT))
+waveFile.setframerate(RATE)
+waveFile.writeframes(b''.join(frames))
+waveFile.close()
+
+
+
+
+
 - Meshing all the files in one only. We realized that we must be very very very tidy when writing a code, otherwise it's really complicated to understand what's going on especially on a long code composed of different elements and parts. 
 *Problem 1*: pyaudio segmentation fault - after that the recording starts, works and ends it won't start a new one automatically. 
 
