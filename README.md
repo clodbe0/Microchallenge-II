@@ -216,7 +216,12 @@ waveFile.close()
 
 
 - Meshing all the files in one only. We realized that we must be very very very tidy when writing a code, otherwise it's really complicated to understand what's going on especially on a long code composed of different elements and parts. 
-*Problem 1*: pyaudio segmentation fault - after that the recording starts, works and ends it won't start a new one automatically. 
+*Problem 1*: pyaudio segmentation fault - after that the recording starts, works and ends it won't start a new one automatically. We solved the problem by writing a new script that restart the function
+<img width="311" alt="Screenshot 2023-03-16 at 17 47 41" src="https://user-images.githubusercontent.com/115195638/225692858-16d4872e-6670-4e47-bb11-23ddfdd8afc7.png">
+
+
+To run it: sh testrerun.sh
+To check the WiFi and add new ones: sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 
 
 
