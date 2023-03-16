@@ -154,7 +154,7 @@ def distance():
  
     return distance
  
-if __name__ == '__main__':
+ if __name__ == '__main__':
     try:
         while True:
             dist = distance()
@@ -163,7 +163,7 @@ if __name__ == '__main__':
                 print ("we are in the area of interest")
             time.sleep(1)
  
-        # Reset by pressing CTRL + C
+         Reset by pressing CTRL + C
     except KeyboardInterrupt:
         print("Measurement stopped by User")
         GPIO.cleanup()
@@ -186,7 +186,7 @@ WAVE_OUTPUT_FILENAME = "file.wav"
  
 audio = pyaudio.PyAudio()
  
-# start Recording
+ start Recording
 stream = audio.open(format=FORMAT, channels=CHANNELS,
                 input_device_index = 1, rate=RATE, input=True,
                 frames_per_buffer=CHUNK)
@@ -199,7 +199,7 @@ for i in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
 print ("finished recording")
  
  
-# stop Recording
+ stop Recording
 stream.stop_stream()
 stream.close()
 audio.terminate()
