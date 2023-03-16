@@ -82,7 +82,11 @@ We first designed together the physical structure on Rhino, struggling with the 
 
 *Problem 5*: When we tried to drill in the screws on the 4mm plywood, it was either breaking or slipping aside. We fixed the Rhino file adding holes to the design. 
 
+
 <img width="1219" alt="Screenshot 2023-03-16 at 15 36 53" src="https://user-images.githubusercontent.com/115195638/225655469-a6c00a13-efb4-4e02-8ff6-6383b473932f.png">
+
+*Problem 6*: Some of our structure 3D Printed pieces were too brittle, we printed them again with a greater amount of walls.
+
 
 
 # **RASPBERRY PI**
@@ -114,6 +118,3 @@ We started working on three different files, one for the distance detector, one 
 
 # **FURTHER DEVELOPMENTS**
 All the stories shared in The Confessional will then be translated into a VR experience, which we are going to exhibit at Mostra Festival and we aim to exhibit at Sonar+D. The whole project is called "Unfolding Conversations". We recognize that the use of substances is both literary and personal, where one's experience is only partially narrated by literature on a substance and its effects. Therefore, we believe that personal conversations are essential when discussing the topic. Unfolding Conversation thus aims to provide a safe space for people to share their experiences, creating a database of personal narratives which will be exhibited in subsequent installations. Through the power of storytelling, we hope to promote understanding, reduce stigma and discrimination, and create a more accepting and open attitude towards psychoactive substance consumption, especially in a music fest environment where people might be more keen to be involved in the topic, looking for further safety and comfort. 
-
-
-
