@@ -94,10 +94,15 @@ Material needed:
 
 ![](https://i.imgur.com/j6AHWOi.png)
 
-We started working on three different files, one for the distance detector, one for the led, one for the microphone to then blend them together in a final one. 
-
 ![IMG_3500](https://user-images.githubusercontent.com/115195638/225609342-7b38a2bf-aecb-4302-971a-409af2cd643a.JPG)
 
+We started working on three different files, one for the distance detector, one for the led, one for the microphone to then blend them together in a final one. 
+- In the first one we connected the detector to measure distances, and we set an area that represents our area of interest when we want the recording to    start. Since that the lateral measure of our box is 40 cm we set the area of interest as 35 cm, so that the area is defined once that the person is already inside. 
+<img width="367" alt=" " src="https://user-images.githubusercontent.com/115195638/225652500-6762d770-9ef6-43a9-99c5-8d1712a7bc7f.png">
+- The script for the led was the most simple one, basically just connecting the LED with an on and off function.
+- The last script is the one that triggered us the most.
+  *Problem 1*: We first started with a microphone that unfortunately didn't work. Then we switched to usb headphones with microphone (we're just using the microphone). We managed to actually record, to play the recording we first moved them in a USB and then in the laptop to check. 
+- Meshing all the files in one only. We realized that we must be very very very tidy when writing a code, otherwise it's really complicated to understand what's going on especially on a long code composed of different elements and parts. 
 *Problem 1*: pyaudio segmentation fault - after that the recording starts, works and ends it won't start a new one automatically. 
 
 
