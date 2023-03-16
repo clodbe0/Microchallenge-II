@@ -82,12 +82,13 @@ We first designed together the physical structure on Rhino, struggling with the 
 
 *Problem 5*: When we tried to drill in the screws on the 4mm plywood, it was either breaking or slipping aside. We fixed the Rhino file adding holes to the design. 
 
+![](https://i.imgur.com/7fQXYfc.jpg)
 
 <img width="1219" alt="Screenshot 2023-03-16 at 15 36 53" src="https://user-images.githubusercontent.com/115195638/225655469-a6c00a13-efb4-4e02-8ff6-6383b473932f.png">
 
 *Problem 6*: Some of our structure 3D Printed pieces were too brittle, we printed them again with a greater amount of walls.
 
-
+![](https://i.imgur.com/Oh2xMXJ.jpg)
 
 # **RASPBERRY PI**
 
