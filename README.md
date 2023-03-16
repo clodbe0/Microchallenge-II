@@ -80,6 +80,11 @@ We first designed together the physical structure on Rhino, struggling with the 
 
 *Problem 4*: We run out of inserts. Bought them very last minute.
 
+*Problem 5*: When we tried to drill in the screws on the 4mm plywood, it was either breaking or slipping aside. We fixed the Rhino file adding holes to the design. 
+
+<img width="1219" alt="Screenshot 2023-03-16 at 15 36 53" src="https://user-images.githubusercontent.com/115195638/225655469-a6c00a13-efb4-4e02-8ff6-6383b473932f.png">
+
+
 # **RASPBERRY PI**
 
 Material needed: 
