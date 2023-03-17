@@ -90,6 +90,12 @@ We first designed together the physical structure on Rhino, struggling with the 
 
 ![](https://i.imgur.com/aXNwuW4.jpg)
 
+![IMG_3515](https://user-images.githubusercontent.com/115195638/225922114-5bbc2ee2-5667-47a1-8da3-1c41e0ae0524.JPG)
+![IMG_3516](https://user-images.githubusercontent.com/115195638/225922141-e35daedc-6c62-4cbb-b4e5-72de295bfece.JPG)
+
+
+
+
 # **RASPBERRY PI**
 
 Material needed: 
