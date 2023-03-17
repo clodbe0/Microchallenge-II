@@ -93,6 +93,11 @@ We first designed together the physical structure on Rhino, struggling with the 
 ![IMG_3515](https://user-images.githubusercontent.com/115195638/225922114-5bbc2ee2-5667-47a1-8da3-1c41e0ae0524.JPG)
 ![IMG_3516](https://user-images.githubusercontent.com/115195638/225922141-e35daedc-6c62-4cbb-b4e5-72de295bfece.JPG)
 
+*Problem 7*
+
+Some pieces were not Parametrically designed, so we did not know where to drill at times. This made our design process longer, and allowed for mistakes. Next time we should include the drilled holes in the CNC and Laser cut designs, and also use precise measurements when modelling our 3D pieces.
+
+We did solve this issue for the laser cut parts (since laser cutting is fast), but with the CNC cut planks we struggled alot.
 
 
 
