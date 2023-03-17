@@ -220,6 +220,9 @@ waveFile.close()
 <img width="311" alt="Screenshot 2023-03-16 at 17 47 41" src="https://user-images.githubusercontent.com/115195638/225692858-16d4872e-6670-4e47-bb11-23ddfdd8afc7.png">
 
 
+<img width="566" alt="Screenshot 2023-03-17 at 14 26 03" src="https://user-images.githubusercontent.com/115195638/225917888-8bf42af2-5168-416f-abea-7dc73abea11b.png">
+
+
 To run it: sh testrerun.sh
 To check the WiFi and add new ones: sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 
